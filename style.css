@@ -1,6 +1,21 @@
 /* css classes */
 
+/* font (local added) */
+
+@font-face {
+    font-family: 'Figtree', sans-serif;
+    src: url('./fonts/static/Figtree-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 /* global */
+
+* {
+    box-sizing: border-box;
+}
+
 
 body {
     display: flex;
@@ -9,6 +24,9 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+
+    font-family: 'Figtree', sans-serif;
+    font-size: 16px;
 }
 
 
@@ -38,14 +56,21 @@ h1 {
 
 /* Header */
 
-.header-logo {
+.header-fotogram-logo {
     display: flex;
-    object-fit: cover;
+    justify-content: left;
 
     max-width: 1440px;
     padding: 20px 0;
     margin: 0 240px;
     gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.header-fotogram-logo img {
+    object-fit: none;
 }
 
 
@@ -61,9 +86,8 @@ h1 {
     align-items: center;
 
     max-width: 1440px;
-    padding-top: 20px;
+    padding: 20px 0;
     margin: 0 240px;
-    width: 100vh;
 }
 
 
