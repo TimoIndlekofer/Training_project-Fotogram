@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotogram</title>
 
-    <!-- Links to other files (style.css, script.jss) -->
+    <!-- Link to style.css -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
 </head>
 <body>
     <header>
@@ -20,6 +19,7 @@
     <main>
         <h1>Your personal photo album</h1>
 
+        <!-- Picture gallery -->
         <div class="gallery">
             <figure>
                 <img src="./pictures/alaska_winter_lake.jpg" alt="Picture Alaska winter lake" class="gallery-item">
@@ -58,6 +58,7 @@
                 <img src="./pictures/winter_tree.jpg" alt="Picture winter tree" class="gallery-item">
             </figure>
         </div>
+
     </main>
 
     <footer>
@@ -66,6 +67,20 @@
             <p>&copy; 2023 Developer Akademie GmbH</p>
         </div>
     </footer>
+
+
+
+
+
+
+     <!-- Modal dialog box -->
+    <dialog id="dialog-box">
+        <img src="" alt="Picture full view" id="picture-full-view">
+        <button id="close-button-dialog-box">Fenster schließen</button>
+    </dialog>
+
+    <!-- Link to script.js -->
+    <script src="script.js"></script>
 
 </body>
 </html>

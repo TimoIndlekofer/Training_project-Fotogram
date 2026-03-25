@@ -47,6 +47,24 @@ main {
 }
 
 
+dialog {
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+dialog img {
+    max-width: 100%;
+    max-height: 80vh;
+}
+
+
 footer {
     background-color: rgba(9, 33, 42, 1);
     background-image: url('./img/footer_subtract.png');
@@ -66,6 +84,8 @@ figure {
     margin: 0;
     padding: 0;
     line-height: 0;
+
+    cursor: pointer;
 }
 
 
@@ -91,7 +111,7 @@ figure {
 }
 
 
-/* Main */
+/* ##### Main ##### */
 
 /* Gallery */
 
@@ -127,6 +147,19 @@ figure {
 .gallery-item:hover {
     transform: scale(1.2);
 }
+
+
+/* Dialog box */
+
+#close-button-dialog-box {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+
+
 
 
 /* Footer */
