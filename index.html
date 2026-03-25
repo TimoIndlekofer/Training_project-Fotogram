@@ -75,8 +75,18 @@
 
      <!-- Modal dialog box -->
     <dialog id="dialog-box">
-        <img src="" alt="Picture full view" id="picture-full-view">
-        <button id="close-button-dialog-box">Fenster schließen</button>
+        <header class="dialog-header">
+            <h2 id="dialog-title">Picture name: </h2>
+            <button class="close-button" id="close-button-dialog-box"><img src="./img/dialog_close_button_default.png" alt="Close button"></button>
+        </header>
+        <main>
+            <img src="" alt="Picture full view" id="picture-full-view">
+        </main>
+        <footer class="dialog-footer">
+            <button class="arrow-button-left"><img src="./img/dialog_next_button_default.png" alt="Next button left"></button>
+            <span>Test</span>
+            <button class="arrow-button-right"><img src="./img/dialog_next_button_default.png" alt="Next button right"></button>
+        </footer>
     </dialog>
 
     <!-- Link to script.js -->
