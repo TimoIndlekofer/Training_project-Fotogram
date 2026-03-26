@@ -21,15 +21,6 @@ galleryPictures.forEach((element, index) => {
         currentIndex = index;
         updateDialog();
         dialogBox.showModal();
-
-        // Get full file name from URL
-        let fileName = element.src.split('/').pop();
-
-        // Remove file ending
-        let removeFileEnding = fileName.slice(0, fileName.lastIndexOf('.'));
-
-        // Add file name (without file ending OR full file name)
-        dialogTitle.textContent = "Picture name: " + removeFileEnding || fileName;
     });
 });
 
@@ -38,25 +29,39 @@ closeButton.addEventListener('click', () => {
     dialogBox.close();
 });
 
+// Click on background outside dialog: Close dialog
+dialogBox.addEventListener('click', (element) => {
+    if (element.target == dialogBox) dialogBox.close();
+});
+
 // Click on left arrow: Previous picture
-document.getElementById('left-arrow').addEventListener('click', () => {
+leftArrow.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + galleryPictures.length) % galleryPictures.length;
     updateDialog();
 });
 
 // Click on right arrow: Next picture
-document.getElementById('right-arrow').addEventListener('click', () => {
+rightArrow.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % galleryPictures.length;
     updateDialog();
 });
 
-// Counter for current picture number and total number of pictures 
+// Counter for current picture filename, picture index and total number of pictures 
 function updateDialog() {
-    pictureFullView.src = galleryPictures[currentIndex].src;
+    const currentPicture = galleryPictures[currentIndex];
+    pictureFullView.src = currentPicture.src;
+    pictureFullView.alt = currentPicture.alt;
+
+    // Picture filename for header area of dialog
+    const fileName = currentPicture.src.split('/').pop();
+    const removeFileEnding = fileName.slice(0, fileName.lastIndexOf('.'));
+    dialogTitle.textContent = "Picture name: " + removeFileEnding || fileName;
+
+    // Picture index and total number of pictures for footer area of dialog
     counter.textContent = `${currentIndex + 1} / ${galleryPictures.length}`;
 }
 
-// Control the arrows with arrow keys on the keyboard
+// Control the arrows with arrow keys on the keyboard in dialog window
 document.addEventListener('keydown', (event) => {
     if (!dialogBox.open) return;
 
