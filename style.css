@@ -1,6 +1,6 @@
-/* css classes */
+/* ##### css classes ##### */
 
-/* font (local added) */
+/* ##### font (local added) ##### */
 
 @font-face {
     font-family: 'Figtree', sans-serif;
@@ -10,7 +10,7 @@
 }
 
 
-/* global */
+/* ##### global ##### */
 
 * {
     box-sizing: border-box;
@@ -99,7 +99,7 @@ figure {
 }
 
 
-/* Desktop version */
+/* ##### Desktop version (1281px or higher) ##### */
 
 /* Header */
 
@@ -287,11 +287,45 @@ figure {
 
 
 
+/* ##### Tablet version (768px - 1280px) ##### */
+
+@media (min-width: 768px) and (max-width: 1280px) {
+
+    /* Header */
+    
+    .header-fotogram-logo {
+        margin: 0 120px;
+    }
+
+
+    /* Main */
+
+    /* Gallery */
+
+    .gallery {
+        margin: 0 120px;
+    }
+
+
+    /* Dialog box */
+
+    .dialog-main {
+        height: 40vh;
+    }
+
+
+    /* Footer */
+
+    .footer-da-logo {
+        margin: 0 120px;
+    }
+}
 
 
 
 
-/* Tablet version */
+
+/* ##### Mobile version (320px - 767px) ##### */
 
 
 
@@ -299,6 +333,4 @@ figure {
 
 
 
-
-
-/* Mobile version */
+/* ##### Evtl. Mobile very small (320px - 374px) ##### */
