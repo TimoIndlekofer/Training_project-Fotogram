@@ -55,7 +55,7 @@ function updateDialog() {
     // Picture filename for header area of dialog
     const fileName = currentPicture.src.split('/').pop();
     const removeFileEnding = fileName.slice(0, fileName.lastIndexOf('.'));
-    dialogTitle.textContent = "Picture name: " + removeFileEnding || fileName;
+    dialogTitle.textContent = removeFileEnding || fileName;
 
     // Picture index and total number of pictures for footer area of dialog
     counter.textContent = `${currentIndex + 1} / ${galleryPictures.length}`;
@@ -71,55 +71,3 @@ document.addEventListener('keydown', (event) => {
         rightArrow.click();
     }
 });
-
-
-
-
-
-
-// Old version:
-// Click on picture in gallery: Open dialog box
-// galleryPictures.forEach(element => {
-//     element.addEventListener('click', () => {
-
-//         // Open dialog box
-//         dialogBox.showModal();
-//         pictureFullView.src = element.src;
-
-//         // Get full file name from URL
-//         let fileName = element.src.split('/').pop();
-
-//         // Remove file ending
-//         let removeFileEnding = fileName.slice(0, fileName.lastIndexOf('.'));
-
-//         // Add file name (without file ending OR full file name)
-//         dialogTitle.textContent = "Picture name: " + removeFileEnding || fileName;
-//     });
-// });
-
-
-// // Click on close button: Close dialog
-// closeButton.addEventListener('click', () => {
-//     dialogBox.close();
-// });
-
-
-// // Click on background: Close dialog
-// dialogBox.addEventListener('click', (element) => {
-//     if (element.target == dialogBox) dialogBox.close();
-// });
-
-
-
-
-
-// leftArrow.addEventListener('click', () => {
-//     currentIndex = (currentIndex + 1) % pictureSource.length;
-//     pictureFullView.src = pictureSource[currentIndex];
-// });
-
-
-// rightArrow.addEventListener('click', () => {
-//     currentIndex = (currentIndex - 1 + pictureSource.length) % pictureSource.length;
-//     pictureFullView.src = pictureSource[currentIndex];
-// });
