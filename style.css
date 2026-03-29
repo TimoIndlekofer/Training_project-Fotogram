@@ -108,6 +108,17 @@ figure {
 }
 
 
+a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+a:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 /* ##### Desktop version (1281px or higher) ##### */
 
 /* Header */
@@ -243,6 +254,8 @@ figure {
     cursor: pointer;
 
     transform: rotate(180deg);
+
+    transition: filter 0.3s ease;
 }
 
 
@@ -258,6 +271,8 @@ figure {
     cursor: pointer;
 
     transform: rotate(0deg);
+
+    transition: filter 0.3s ease;
 }
 
 
