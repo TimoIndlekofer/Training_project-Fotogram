@@ -17,7 +17,7 @@
     <!-- Header -->
     <header>
         <div class="header-fotogram-logo">
-            <a href="index.html" class="header-fotogram-logo">
+            <a href="index.html" class="header-fotogram-logo" aria-label="Startseite">
                 <img src="./img/header_fotogram_logo.png" alt="Picture Fotogram logo">
                 <img src="./img/header_fotogram_name.png" alt="Picture Fotogram name">
             </a>
@@ -29,42 +29,42 @@
         <h1>Your personal photo album</h1>
 
         <!-- Picture gallery -->
-        <div class="gallery">
+        <div class="gallery" role="group" aria-label="Bildergalerie">
             <figure>
-                <img src="./pictures/alaska_winter_lake.jpg" alt="Picture Alaska winter lake" class="gallery-item">
+                <img src="./pictures/alaska_winter_lake.jpg" alt="Picture Alaska winter lake" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>
             <figure>
-                <img src="./pictures/comic_city_view.jpg" alt="Picture comic city view" class="gallery-item">
+                <img src="./pictures/comic_city_view.jpg" alt="Picture comic city view" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>
             <figure>
-                <img src="./pictures/dark_clouds_view.png" alt="Picture dark clouds view" class="gallery-item">
+                <img src="./pictures/dark_clouds_view.png" alt="Picture dark clouds view" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>
             <figure>
-                <img src="./pictures/bird_on_tree.jpg" alt="Picture bird on tree" class="gallery-item">
+                <img src="./pictures/bird_on_tree.jpg" alt="Picture bird on tree" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>
             <figure>
-                <img src="./pictures/storm_clouds_view.jpg" alt="Picture storm clouds view" class="gallery-item">
+                <img src="./pictures/storm_clouds_view.jpg" alt="Picture storm clouds view" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>
             <figure>
-                <img src="./pictures/winter_lake.jpg" alt="Picture winter lake" class="gallery-item">
+                <img src="./pictures/winter_lake.jpg" alt="Picture winter lake" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>
             <figure>
-                <img src="./pictures/duck.jpg" alt="Picture duck" class="gallery-item">
+                <img src="./pictures/duck.jpg" alt="Picture duck" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>
             <figure>
-                <img src="./pictures/sea_view.jpg" alt="Picture sea view" class="gallery-item">
+                <img src="./pictures/sea_view.jpg" alt="Picture sea view" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>
             <figure>
-                <img src="./pictures/bird_on_tree.jpg" alt="Picture bird on tree" class="gallery-item">
+                <img src="./pictures/bird_on_rock.jpg" alt="Picture bird on rock" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>
             <figure>
-                <img src="./pictures/tigers.jpg" alt="Picture tigers" class="gallery-item">
+                <img src="./pictures/tigers.jpg" alt="Picture tigers" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>
             <figure>
-                <img src="./pictures/mountain.jpg" alt="Picture mountain" class="gallery-item">
+                <img src="./pictures/mountain.jpg" alt="Picture mountain" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>
             <figure>
-                <img src="./pictures/winter_tree.jpg" alt="Picture winter tree" class="gallery-item">
+                <img src="./pictures/winter_tree.jpg" alt="Picture winter tree" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>
         </div>
     </main>
@@ -72,7 +72,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-da-logo">
-            <a href="https://developerakademie.com/"><img src="./img/footer_da_logo.png" alt="Picture DA logo"></a>
+            <a href="https://developerakademie.com/" target="_blank" rel="noopener noreferrer" aria-label="Mit Klick auf diesen Link besuchen Sie die Seite der Developer Akademie (öffnet in neuem Tab)"><img src="./img/footer_da_logo.png" alt="Picture DA logo"></a>
             <p class="footer-da-text">&copy; 2023 Developer Akademie GmbH</p>
         </div>
     </footer>
@@ -81,15 +81,15 @@
     <dialog id="dialog-box">
         <header class="dialog-header">
             <h2 id="dialog-title"></h2>
-            <button class="close-button" id="close-button-dialog-box"><img src="./img/dialog_close_button_default.png" alt="Close button"></button>
+            <button class="close-button" id="close-button-dialog-box" aria-label="Schließen"><img src="./img/dialog_close_button_default.png" alt="Close button" aria-hidden="true"></button>
         </header>
         <main class="dialog-main">
             <img src="" alt="Picture full view" id="picture-full-view">
         </main>
         <footer class="dialog-footer">
-            <button class="arrow-button-left" id="left-arrow"><img src="./img/dialog_next_button_default.png" alt="Next button left"></button>
+            <button class="arrow-button-left" id="left-arrow" aria-label="Vorheriges Bild"><img src="./img/dialog_next_button_default.png" alt="Next button left" aria-hidden="true"></button>
             <span class="counter-text" id="counter"></span>
-            <button class="arrow-button-right" id="right-arrow"><img src="./img/dialog_next_button_default.png" alt="Next button right"></button>
+            <button class="arrow-button-right" id="right-arrow" aria-label="Nächstes Bild"><img src="./img/dialog_next_button_default.png" alt="Next button right" aria-hidden="true"></button>
         </footer>
     </dialog>
 

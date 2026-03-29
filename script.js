@@ -22,6 +22,16 @@ galleryPictures.forEach((element, index) => {
         updateDialog();
         dialogBox.showModal();
     });
+
+    // Open dialog window with Enter
+    element.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();  
+            currentIndex = index;
+            updateDialog();
+            dialogBox.showModal();
+        }
+    });
 });
 
 // Click on close button: Close dialog

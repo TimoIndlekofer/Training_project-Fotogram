@@ -17,6 +17,11 @@
 }
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -119,6 +124,13 @@ a:hover {
 }
 
 
+a:focus {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 /* ##### Desktop version (1281px or higher) ##### */
 
 /* Header */
@@ -172,6 +184,11 @@ a:hover {
 
 
 .gallery-item:hover {
+    transform: scale(1.2);
+}
+
+
+.gallery-item:focus {
     transform: scale(1.2);
 }
 
