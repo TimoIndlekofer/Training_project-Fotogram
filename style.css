@@ -10,6 +10,7 @@
 }
 
 
+
 /* ##### global ##### */
 
 * {
@@ -118,17 +119,15 @@ a {
 }
 
 
-a:hover {
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+a:hover, a:focus-visible {
+    transform: scale(1.05);
 }
 
 
-a:focus {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.a:focus:not(:focus-visible) {
+    transform: scale(1);
 }
+
 
 
 /* ##### Desktop version (1281px or higher) ##### */
@@ -183,13 +182,13 @@ a:focus {
 }
 
 
-.gallery-item:hover {
+.gallery-item:hover, .gallery-item:focus {
     transform: scale(1.2);
 }
 
 
-.gallery-item:focus {
-    transform: scale(1.2);
+.gallery-item:focus:not(:focus-visible) {
+    transform: scale(1);
 }
 
 
@@ -348,8 +347,6 @@ a:focus {
 
 
 
-
-
 /* ##### Tablet version (768px - 1280px) ##### */
 
 @media (min-width: 768px) and (max-width: 1280px) {
@@ -386,8 +383,6 @@ a:focus {
 
 
 
-
-
 /* ##### Mobile version (375px - 767px) ##### */
 
 @media (min-width: 375px) and (max-width: 767px) {
@@ -414,7 +409,6 @@ a:focus {
 
         margin: 0;
     }
-
 
 
     /* Header */
@@ -492,8 +486,6 @@ a:focus {
 
 
 
-
-
 /* ##### Mobile very small (320px - 374px) ##### */
 
 @media (min-width: 320px) and (max-width: 374px) {
@@ -520,6 +512,7 @@ a:focus {
 
         margin: 0;
     }
+
 
     /* Header */
     
