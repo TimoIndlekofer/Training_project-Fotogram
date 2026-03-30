@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="./img/header_fotogram_logo.png">
 </head>
 
-<body>
+<body onload="render()">
 
     <!-- Header -->
     <header>
@@ -29,8 +29,8 @@
         <h1>Your personal photo album</h1>
 
         <!-- Picture gallery -->
-        <section class="gallery" role="group" aria-label="Bildergalerie">
-            <figure>
+        <section class="gallery" id="picture-gallery" role="group" aria-label="Bildergalerie">
+            <!-- <figure>
                 <img src="./pictures/alaska_winter_lake.jpg" alt="Picture Alaska winter lake" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>
             <figure>
@@ -65,7 +65,7 @@
             </figure>
             <figure>
                 <img src="./pictures/winter_tree.jpg" alt="Picture winter tree" class="gallery-item" tabindex="0" role="button" aria-label="Bild vergrößern">
-            </figure>
+            </figure> -->
         </section>
     </main>
 
@@ -81,15 +81,15 @@
     <dialog id="dialog-box">
         <header class="dialog-header">
             <h2 id="dialog-title"></h2>
-            <button class="close-button" id="close-button-dialog-box" aria-label="Schließen"><img src="./img/dialog_close_button_default.png" alt="Close button" aria-hidden="true"></button>
+            <button class="close-button" id="close-button-dialog-box" onclick="closeDialog()"" aria-label="Schließen"><img src="./img/dialog_close_button_default.png" alt="Close button" aria-hidden="true"></button>
         </header>
         <main class="dialog-main">
             <img src="" alt="Picture full view" id="picture-full-view">
         </main>
         <footer class="dialog-footer">
-            <button class="arrow-button-left" id="left-arrow" aria-label="Vorheriges Bild"><img src="./img/dialog_next_button_default.png" alt="Next button left" aria-hidden="true"></button>
+            <button class="arrow-button-left" id="left-arrow" onclick="changePicture(-1)" aria-label="Vorheriges Bild"><img src="./img/dialog_next_button_default.png" alt="Next button left" aria-hidden="true"></button>
             <span class="counter-text" id="counter"></span>
-            <button class="arrow-button-right" id="right-arrow" aria-label="Nächstes Bild"><img src="./img/dialog_next_button_default.png" alt="Next button right" aria-hidden="true"></button>
+            <button class="arrow-button-right" id="right-arrow" onclick="changePicture(1)" aria-label="Nächstes Bild"><img src="./img/dialog_next_button_default.png" alt="Next button right" aria-hidden="true"></button>
         </footer>
     </dialog>
 
