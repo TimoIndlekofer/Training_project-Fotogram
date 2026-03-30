@@ -31,6 +31,7 @@ let pictureDatabase = [
     "./pictures/winter_tree.jpg"
 ];
 
+
 // Array with alternative picture names
 let pictureDatabaseAlt = [
     "Picture_alaska_winter_lake.jpg",
@@ -48,6 +49,16 @@ let pictureDatabaseAlt = [
 ];
 
 
+
+
+
+// Init function
+function init() {
+    render();
+    closeDialogEnterButton();
+}
+
+
 // Template for pictures
 function render() {
     let contentReference = document.getElementById('picture-gallery');
@@ -56,14 +67,12 @@ function render() {
     }
 }
 
+
 function getPictureTemplate(index) {
         return `<figure>
                 <img src=${pictureDatabase[index]} alt=${pictureDatabaseAlt[index]} class="gallery-item" onclick="openDialog(${index})" tabindex="0" role="button" aria-label="Bild vergrößern">
             </figure>`
 }
-
-
-
 
 
 // Dialog window
@@ -76,12 +85,15 @@ function openDialog(index) {
 
 function closeDialog() {
     dialogBox.close();
+}
 
-    dialogBox.addEventListener('click', (event) => {
-        if (event.target === dialogBox) {
-            dialogBox.close();
-        }
-    });
+
+function closeDialogEnterButton() {
+        dialogBox.addEventListener('click', (event) => {
+    if (event.target === dialogBox) {
+        dialogBox.close();
+    }
+});
 }
 
 
@@ -107,11 +119,6 @@ function changePicture(direction) {
         currentIndex = pictureDatabase.length -1;
     }
     updateDialog();
-
-
-    // 30.03.2026 - Hat auch funktioniert:
-    // if (currentIndex >= pictureDatabase.length) currentIndex = 0;
-    // if (currentIndex < 0) currentIndex = pictureDatabase.length -1;
 }
 
 
@@ -126,13 +133,6 @@ document.addEventListener('keydown', (event) => {
         rightArrow.click();
     }
 });
-
-
-
-
-
-
-
 
 
 
