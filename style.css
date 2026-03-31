@@ -144,8 +144,8 @@ a:hover, a:focus-visible {
 
     width: 100%;
     max-width: 1440px;
-    padding: 20px 0;
-    margin: 0 240px;
+    padding: 20px 20px;
+
     gap: 10px;
 }
 
@@ -165,8 +165,8 @@ a:hover, a:focus-visible {
     flex-wrap: wrap;
     
     max-width: 1440px;
-    padding: 56px 0;
-    margin: 0 240px;
+    padding: 56px 20px;
+    margin: 0 auto;
     gap: 20px;
 }
 
@@ -332,8 +332,8 @@ a:hover, a:focus-visible {
 
     width: 100%;
     max-width: 1440px;
-    padding: 20px 0;
-    margin: 0 240px;
+    padding: 20px 20px;
+    margin: 0 auto;
 }
 
 
@@ -360,29 +360,14 @@ a:hover, a:focus-visible {
 
     h1 {
         text-align: center;
+        padding: 0 20px;
     }
 
     
     /* Header */
     
     .header-fotogram-logo {
-        margin: 0 120px;
-    }
-
-
-    /* Main */
-
-    /* Gallery */
-
-    .gallery {
-        margin: 0 120px;
-    }
-
-
-    /* Footer */
-
-    .footer-da-logo {
-        margin: 0 120px;
+        justify-content: center;
     }
 }
 
@@ -421,8 +406,6 @@ a:hover, a:focus-visible {
     .header-fotogram-logo {
         flex-wrap: nowrap;
         justify-content: center;
-
-        margin: 0 120px;
     }
 
 
@@ -439,7 +422,6 @@ a:hover, a:focus-visible {
     /* Gallery */
 
     .gallery {
-        margin: 0 56px;
         padding-top: 24px;
         padding-bottom: 56px;
     }
@@ -471,11 +453,6 @@ a:hover, a:focus-visible {
 
     /* Footer */
 
-    .footer-da-logo {
-        margin: 0 56px;
-    }
-
-
     .footer-da-logo img {
         object-fit: cover;
         
@@ -485,7 +462,7 @@ a:hover, a:focus-visible {
 
 
     .footer-da-text {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
@@ -575,11 +552,6 @@ a:hover, a:focus-visible {
 
     /* Footer */
 
-    .footer-da-logo {
-        margin: 0 56px;
-    }
-
-
     .footer-da-logo img {
         object-fit: cover;
 
@@ -589,6 +561,6 @@ a:hover, a:focus-visible {
 
 
     .footer-da-text {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
