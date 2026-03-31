@@ -12,7 +12,7 @@ const rightArrow = document.getElementById('right-arrow');
 let currentIndex = 0;
 
 
-
+// const container = document.getElementById('picture-gallery');
 
 
 // Array with pictures names
@@ -70,7 +70,7 @@ function render() {
 
 function getPictureTemplate(index) {
         return `<figure>
-                <img src=${pictureDatabase[index]} alt=${pictureDatabaseAlt[index]} class="gallery-item" onclick="openDialog(${index})" tabindex="0" role="button" aria-label="Bild vergrößern">
+                <img src=${pictureDatabase[index]} alt=${pictureDatabaseAlt[index]} class="gallery-item" onclick="openDialog(${index})" tabindex="0" role="button" aria-label="Bild vergrößern" data-index="${index}">
             </figure>`
 }
 
@@ -79,7 +79,7 @@ function getPictureTemplate(index) {
 function openDialog(index) {
     currentIndex = index;
     updateDialog();
-    dialogBox.showModal(); 
+    dialogBox.showModal();
 }
 
 
@@ -134,6 +134,22 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        const img = event.target.closest('.gallery-item');
+
+        if (img) {
+            event.preventDefault();
+
+            const index = parseInt(img.getAttribute('data-index'), 10);
+
+            if (!isNaN(index)) {
+                openDialog(index);
+            }
+        }
+    } 
+});
 
 
 
