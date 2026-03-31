@@ -152,6 +152,13 @@ document.addEventListener('keydown', (event) => {
 });
 
 
+dialogBox.addEventListener('close', () => {
+    const img = document.querySelector('#picture-full-view');
+    if (img) {
+        img.src = "";        
+    }
+});
+
 
 
 
